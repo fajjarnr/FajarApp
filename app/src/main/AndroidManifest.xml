@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fajar.fajar175">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".practice7.ui.Practice7DetailActivity"></activity>
+        <activity
+            android:name=".practice7.Practice7Activity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <provider
+            android:name=".practice6.provider.DataContentProvider"
+            android:authorities="com.fajar.fajar175.datawisata"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission=" com.fajar.fajar175.datawisata.READ_DATABASE"
+            android:writePermission=" com.fajar.fajar175.datawisata.WRITE_DATABASE"></provider>
+
+        <activity android:name=".practice6.Practice6DetailActivity" />
+        <activity android:name=".practice6.Practice6Activity" />
+
+        <service
+            android:name=".practice5.service.MyMediaService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".practice5.service.MyBoundService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".practice5.service.MyIntentService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".practice5.service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".practice5.service.MediaService"
+            android:enabled="false"
+            android:exported="false" />
+
+        <activity android:name=".practice5.Practice5Activity" />
+        <activity
+            android:name=".practice4.Practice4SmsReceiverActivity"
+            android:theme="@style/SmsReceiverTheme" />
+
+        <receiver
+            android:name=".practice4.SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".practice4.Practice4Activity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".practice3.Practice3MapsActivity"
+            android:label="@string/title_activity_practice3_maps" />
+        <activity
+            android:name=".practice3.Practice3DetailActivity"
+            android:label="@string/title_activity_practice3_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".practice3.Practice3Activity" />
+        <activity android:name=".Practice2.Practice2ReadDataActivity" />
+        <activity android:name=".Practice2.Practice2FirstFragment" />
+        <activity android:name=".Practice2.Practice2ForFragmentActivity" />
+        <activity android:name=".Practice2.Practice2Activity" />
+        <activity android:name=".Practice1.tugas1" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

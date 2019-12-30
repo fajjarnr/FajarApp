@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_service"
+        android:icon="@drawable/ic_extension_black_24dp"
+        android:title="Service" />
+    <item
+        android:id="@+id/nav_intent_service"
+        android:icon="@drawable/ic_content_copy_black_24dp"
+        android:title="Intent Service" />
+    <item
+        android:id="@+id/nav_bound_service"
+        android:icon="@drawable/ic_replay_10_black_24dp"
+        android:title="Bound Service" />
+    <item
+        android:id="@+id/nav_media_player_service"
+        android:icon="@drawable/ic_play_circle_outline_black_24dp"
+        android:title="Media Player Service" />
+
+</menu>
